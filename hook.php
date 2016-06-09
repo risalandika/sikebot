@@ -8,8 +8,8 @@
 // Load composer
 require __DIR__ . '/vendor/autoload.php';
 
-$API_KEY = 'your_bot_api_key';
-$BOT_NAME = 'username_bot';
+$API_KEY = '212578930:AAHrcM7QUODJnl47uQeWgaKRiAItBmh2YV8';
+$BOT_NAME = 'si_kebot';
 //$commands_path = __DIR__ . '/Commands/';
 //$mysql_credentials = [
 //    'host'     => 'localhost',
