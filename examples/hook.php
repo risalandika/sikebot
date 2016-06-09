@@ -29,11 +29,12 @@ try {
     //$telegram->enableMySQL($mysql_credentials, $BOT_NAME . '_');
 
     //// Add an additional commands path
-    //$telegram->addCommandsPath($commands_path);
+    $commands_path = "https://sikebot.herokuapp.com/examples/Commands/"
+    $telegram->addCommandsPath($commands_path);
 
     //// Here you can enable admin interface for the channel you want to manage
-    //$telegram->enableAdmins(['your_telegram_id']);
-    //$telegram->setCommandConfig('sendtochannel', ['your_channel' => '@type_here_your_channel']);
+    $telegram->enableAdmins(['your_telegram_id']);
+    $telegram->setCommandConfig('sendtochannel', ['your_channel' => '@type_here_your_channel']);
 
     //// Here you can set some command specific parameters,
     //// for example, google geocode/timezone api key for date command:
@@ -56,10 +57,10 @@ try {
     $telegram->handle();
 } catch (Longman\TelegramBot\Exception\TelegramException $e) {
     // Silence is gold!
-    // echo $e;
+    echo $e;
     // log telegram errors
     \Longman\TelegramBot\TelegramLog::error($e);
 } catch (Longman\TelegramBot\Exception\TelegramLogException $e) {
     // Silence is gold! Uncomment this to catch log initilization errors
-    //echo $e;
+    echo $e;
 }
