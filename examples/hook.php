@@ -18,6 +18,8 @@ $BOT_NAME = 'si_kebot';
 //    'database' => 'dbname',
 //];
 
+$COMMANDS_FOLDER = __DIR__.'/Commands/';
+
 try {
     // Create Telegram API object
     $telegram = new Longman\TelegramBot\Telegram($API_KEY, $BOT_NAME);
@@ -29,8 +31,7 @@ try {
     //$telegram->enableMySQL($mysql_credentials, $BOT_NAME . '_');
 
     //// Add an additional commands path
-    $commands_path = "https://sikebot.herokuapp.com/examples/Commands/";
-    $telegram->addCommandsPath($commands_path);
+    $telegram->addCommandsPath($COMMANDS_FOLDER);
 
     //// Here you can enable admin interface for the channel you want to manage
     $telegram->enableAdmins(['your_telegram_id']);
