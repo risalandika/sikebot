@@ -9,6 +9,6 @@ $updateArray = json_decode($update, TRUE);
 
 //$text = $updateArray["result"][0]["message"]["text"];
 $chatId = $updateArray["result"][0]["message"]["chat"]["id"];
-
-file_get_contents($website."/sendmessage?chat_id=".$chatId."$text=spotaker lu!");
+print_r($chatId);
+//file_get_contents($website."/sendmessage?chat_id=".$chatId."$text=spotaker lu!");
 ?>
